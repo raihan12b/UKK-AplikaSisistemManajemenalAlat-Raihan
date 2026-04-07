@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin</title>
+</head>
+<body>
+
+<h1>Dashboard Admin</h1>
+
+<table border="1" width="100%">
+  <tr>
+
+    
+    <td width="20%" valign="top">
+      <h3>Menu</h3>
+      <ul>
+        <li><button onclick="tampil('alat')">Alat</button></li>
+        <li><button onclick="tampil('user')">User</button></li>
+        <li><button onclick="tampil('kategori')">Kategori</button></li>
+        <li><button onclick="tampil('alatmasuk')">Alat Masuk</button></li>
+        <li><button onclick="tampil('pengembalian')">pengembalian</button></li>
+        <li><button onclick="tampil('peminjaman')">Pinjaman</button></li>
+        <li><button onclick="tampil('logaktifitas')">Log Aktifitas</button></li>
+        
+      </ul>
+    </td>
+
+         
+
+    <td valign="top">
+
+      <div id="alat" style="display:none;">
+        <h2>Alat</h2>
+        <p>data alat</p>
+      </div>
+
+      <div id="user" style="display:none;">
+        <h2>User</h2>
+        <p>user</p>
+      </div>
+
+      <div id="kategori" style="display:none;">
+        <h2>Kategori</h2>
+        <p>kategori</p>
+      </div>
+
+      <div id="alatmasuk" style="display:none;">
+        <h2>Alat Masuk</h2>
+        <p>data alat masuk</p>
+      </div>
+
+      <div id="pengembalian" style="display:none;">
+        <h2>pengembalian</h2>
+        <p>Data pengembalian</p>
+      </div>
+
+      <div id="peminjaman" style="display:none;">
+        <h2>Peminjaman</h2>
+        <p>data pinjaman</p>
+      </div>
+
+      <div id="logaktifitas" style="display:none;">
+        <h2>log Aktifitas</h2>
+        <p>Log Aktifitas</p>
+      </div>
+
+    </td>
+ 
+  </tr>
+</table>
+<button onclick="logout()">Logout</button>
+<script>
+function tampil(menu) {
+  document.getElementById("alat").style.display = "none";
+  document.getElementById("user").style.display = "none";
+  document.getElementById("kategori").style.display = "none";
+  document.getElementById("alatmasuk").style.display = "none";
+  document.getElementById("pengembalian").style.display = "none";
+  document.getElementById("peminjaman").style.display = "none";
+  document.getElementById("logaktifitas").style.display = "none";
+
+  document.getElementById(menu).style.display = "block";
+}
+</script>
+
+<script>
+  function logout() {
+    alert("Anda telah logout");
+    window.location.href = "login.html";
+  }
+ 
